@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padaria Piko do Pão | Pães Fresquinhos e Café Quentinho</title>
+  <meta name="description" content="Conheça a Padaria Piko do Pão. Venha nos visitar ou faça seu pedido!">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/logo.png">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ========================================================
+       BARRA DE NAVEGAÇÃO (HEADER)
+       ======================================================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#inicio" class="brand-logo" aria-label="Padaria Piko do Pão - Página Inicial">
+        <!-- Logo do Projeto (Substitua por assets/images/logo/sua-logo.png se desejar) -->
+        <img src="assets/images/logo/logo.png" alt="Padaria Piko Logo" class="logo-img">
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#cardapios" class="nav-link">Cardápio</a></li>
+          <li><a href="#fotos" class="nav-link">Fotos</a></li>
+          <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+          <li><a href="#localizacao" class="nav-link">Localização</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu de Navegação">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       SEÇÃO HERO (DESTAQUE PRINCIPAL)
+       ======================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          O sabor autêntico da nossa <span>tradição</span>
+        </h1>
+        <p class="hero-description">
+          Pães e Tortas feitos com amor, diretamente para você​.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#cardapios" class="btn btn-primary">Explorar Cardápio</a>
+          <a href="#localizacao" class="btn btn-secondary">Como Chegar</a>
+        </div>
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <h4>100%</h4>
+            <p>Amor e Dedicação</p>
+          </div>
+          <div class="highlight-item">
+            <h4>+30</h4>
+            <p>Receitas Variadas</p>
+          </div>
+          <div class="highlight-item">
+            <h4>4.6 ★</h4>
+            <p>Avaliação dos Clientes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img src="assets/images/galeria/Torta Cereja Menor.jpeg" alt="Torta De Cereja" class="hero-image">
+        <div class="hero-badge-float">
+          <span class="hero-badge-icon"></span>
+          <div class="hero-badge-text">
+            <strong>Nossas famosas tortas feitas com amor e carinho!</strong>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SEÇÃO: NOSSOS SERVIÇOS
+       ======================================================== -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">O que fazemos</span>
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="section-subtitle">
+          Cuidamos de cada detalhe desde o amanhecer para proporcionar experiências gastronômicas acolhedoras.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Confeitaria & Encomendas</h3>
+          <p class="service-desc">
+            Tortas Tradicionais e Gourmets refinadas e decoradas sob encomenda para o seu café da tarde ou
+            comemorações em família.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Cafeteria & Lanches Rápidos</h3>
+          <p class="service-desc">
+            Espaço confortável para desfrutar de cafés especiais, salgados, bolos, mistos e sonhos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEÇÃO DE CARDÁPIOS INTERATIVOS ================= -->
+  <section class="piko-menu-section" id="cardapios">
+    <div class="piko-menu-header">
+      <span class="piko-badge">Encomendas Online</span>
+      <h2 class="piko-title">Nossos Cardápios</h2>
+      <p class="piko-subtitle">Clique em uma das opções abaixo para montar seu pedido personalizado e enviar direto para
+        o nosso WhatsApp.</p>
+    </div>
+
+    <!-- 3 Blocos Lado a Lado -->
+    <div class="piko-cards-grid">
+
+      <!-- Bloco 1: Salgados -->
+      <div class="piko-card" onclick="openPikoModal('salgados')">
+        <div>
+          <div class="piko-card-icon">🥐</div>
+          <h3 class="piko-card-title">Salgados</h3>
+          <span class="piko-price-tag">Fritos R$ 100/cento • Assados R$ 180/cento</span>
+          <p class="piko-card-desc">Monte seu pedido variado escolhendo a quantidade exata de cada tipo (ex: 30
+            coxinhas, 100 salsichinhas, 15 kibes...).</p>
+          <ul class="piko-preview-list">
+            <li>8 opções de Salgados Fritos</li>
+            <li>Mini Assados e Mini Croissants</li>
+            <li>Quantidade livre por sabor</li>
+          </ul>
+        </div>
+        <button type="button" class="piko-card-btn">Montar Pedido de Salgados →</button>
+      </div>
+
+      <!-- Bloco 2: Tortas (Tradicionais + Gourmet) -->
+      <div class="piko-card" onclick="openPikoModal('tortas')">
+        <div>
+          <div class="piko-card-icon">🎂</div>
+          <h3 class="piko-card-title">Tortas Doces</h3>
+          <span class="piko-price-tag">R$ 59,99 / kg</span>
+          <p class="piko-card-desc">Todas as nossas Tortas Tradicionais e Gourmet reunidas em um só cardápio. Escolha 1
+            sabor para sua encomenda.</p>
+          <ul class="piko-preview-list">
+            <li>16 sabores Tradicionais</li>
+            <li>8 sabores Gourmet</li>
+            <li>Seleção exclusiva de 1 sabor</li>
+          </ul>
+        </div>
+        <button type="button" class="piko-card-btn">Escolher Sabor da Torta →</button>
+      </div>
+
+      <!-- Bloco 3: Sobremesas -->
+      <div class="piko-card" onclick="openPikoModal('sobremesas')">
+        <div>
+          <div class="piko-card-icon">🍮</div>
+          <h3 class="piko-card-title">Sobremesas</h3>
+          <span class="piko-price-tag">A partir de R$ 49,99 / kg</span>
+          <p class="piko-card-desc">Nossas sobremesas especiais preparadas artesanalmente para adoçar seu evento ou
+            final de semana.</p>
+          <ul class="piko-preview-list">
+            <li>Banoffee & Morangonoffe</li>
+            <li>Torta Alemã & Torta de Limão</li>
+            <li>Pudim de Leite Condensado</li>
+          </ul>
+        </div>
+        <button type="button" class="piko-card-btn">Escolher Sobremesas →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MODAIS DOS CARDÁPIOS ================= -->
+
+  <!-- Modal 1: Salgados -->
+  <div class="piko-modal-overlay" id="piko-modal-salgados">
+    <div class="piko-modal-box">
+      <div class="piko-modal-header">
+        <h3>Monte seu Pedido de Salgados</h3>
+        <button type="button" class="piko-modal-close" onclick="closePikoModals()">✕</button>
+      </div>
+      <div class="piko-modal-body">
+        <div class="piko-tip-bar">
+          💡 Digite a quantidade exata no campo ou use os botões <strong>-5 / +5</strong> para variar como preferir!
+        </div>
+
+        <h4 class="piko-group-title">
+          Salgados Fritos <span>R$ 100,00 / cento (R$ 1,00 un.)</span>
+        </h4>
+        <div id="piko-list-fritos"></div>
+
+        <h4 class="piko-group-title">
+          Salgados Assados <span>R$ 180,00 / cento (R$ 1,80 un.)</span>
+        </h4>
+        <div id="piko-list-assados"></div>
+      </div>
+      <div class="piko-modal-footer">
+        <div class="piko-summary">
+          Total selecionado: <span id="piko-salgados-count">0 unidades</span>
+          <strong id="piko-salgados-total">R$ 0,00</strong>
+        </div>
+        <button type="button" class="piko-wa-btn" onclick="sendPikoSalgadosWA()">
+          Enviar Pedido pelo WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Tortas (1 Sabor) -->
+  <div class="piko-modal-overlay" id="piko-modal-tortas">
+    <div class="piko-modal-box">
+      <div class="piko-modal-header">
+        <h3>Cardápio de Tortas (Selecione 1 Sabor)</h3>
+        <button type="button" class="piko-modal-close" onclick="closePikoModals()">✕</button>
+      </div>
+      <div class="piko-modal-body">
+        <div class="piko-tip-bar">
+          🎂 Todas as tortas saem por <strong>R$ 59,99 / kg</strong>. Selecione <strong>1 sabor</strong> abaixo:
+        </div>
+
+        <h4 class="piko-group-title">
+          Tortas Gourmet <span>R$ 59,99 / kg</span>
+        </h4>
+        <div class="piko-radio-grid" id="piko-list-tortas-gourmet"></div>
+
+        <h4 class="piko-group-title">
+          Tortas Tradicionais <span>R$ 59,99 / kg</span>
+        </h4>
+        <div class="piko-radio-grid" id="piko-list-tortas-tradicionais"></div>
+
+        <div class="piko-weight-box">
+          <div>
+            <strong>Peso desejado (kg):</strong>
+            <span class="piko-item-sub">Ajuste o peso aproximado da sua torta</span>
+          </div>
+          <div class="piko-qty-controls">
+            <button type="button" class="piko-qty-btn" onclick="changePikoTortaWeight(-0.5)">-</button>
+            <input type="number" id="piko-torta-weight" class="piko-qty-input" value="1.5" min="1" step="0.5"
+              onchange="updatePikoTortaSummary()">
+            <button type="button" class="piko-qty-btn" onclick="changePikoTortaWeight(0.5)">+</button>
+          </div>
+        </div>
+        <p class="piko-note">🍰 Tortas Decoradas: consultar alteração de preço no atendimento.</p>
+      </div>
+      <div class="piko-modal-footer">
+        <div class="piko-summary">
+          Sabor: <span id="piko-torta-selected">Nenhum selecionado</span>
+          <strong id="piko-torta-total">R$ 89,99 (1.5 kg)</strong>
+        </div>
+        <button type="button" class="piko-wa-btn" onclick="sendPikoTortaWA()">
+          Encomendar Torta no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Sobremesas -->
+  <div class="piko-modal-overlay" id="piko-modal-sobremesas">
+    <div class="piko-modal-box">
+      <div class="piko-modal-header">
+        <h3>Cardápio de Sobremesas</h3>
+        <button type="button" class="piko-modal-close" onclick="closePikoModals()">✕</button>
+      </div>
+      <div class="piko-modal-body">
+        <div class="piko-tip-bar">
+          🍮 Escolha os quilos desejados de cada sobremesa:
+        </div>
+        <div id="piko-list-sobremesas"></div>
+      </div>
+      <div class="piko-modal-footer">
+        <div class="piko-summary">
+          Total estimado:
+          <strong id="piko-sobremesas-total">R$ 0,00</strong>
+        </div>
+        <button type="button" class="piko-wa-btn" onclick="sendPikoSobremesasWA()">
+          Pedir Sobremesas no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO: CARDÁPIO (INTERATIVO COM FILTROS)
+       ======================================================== -->
+  <!-- Cardápio Desativado    <section class="menu-section" id="cardapio">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Delícias da Casa</span>
+            <h2 class="section-title">Nosso Cardápio</h2>
+            <p class="section-subtitle">
+              Escolha uma categoria abaixo para navegar pelas nossas receitas diárias.
+            </p>
+          </div> 
+  -->
+
+  <!-- Filtros por Categoria -->
+  <!--
+          <div class="menu-filters" role="tablist">
+            <button class="filter-btn active" data-category="todos" role="tab">Todos</button>
+            <button class="filter-btn" data-category="paes" role="tab">Pães Artesanais</button>
+            <button class="filter-btn" data-category="doces" role="tab">Doces & Bolos</button>
+            <button class="filter-btn" data-category="salgados" role="tab">Salgados & Lanches</button>
+            <button class="filter-btn" data-category="bebidas" role="tab">Cafés & Bebidas</button>
+          </div>
+  -->
+
+  <!-- Grid dinâmico gerado pelo menu-data.js -->
+  <!--
+          <div class="menu-grid" id="menuGrid"></div>
+        </div>
+      </section>
+    -->
+
+  <!-- ========================================================
+       SEÇÃO: FOTOS & GALERIA
+       ======================================================== -->
+  <section class="gallery-section" id="fotos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Momentos & Sabores</span>
+        <h2 class="section-title">Nossa Galeria</h2>
+        <p class="section-subtitle">
+          Um pouquinho do nosso dia a dia, da nossa cozinha artesanal e do carinho em cada fornada.
+        </p>
+      </div>
+
+      <!-- Slider Wrapper com Botões de Navegação -->
+      <div class="gallery-slider-wrapper">
+        <button class="gallery-nav-btn prev" id="galleryPrevBtn" aria-label="Fotos anteriores" title="Fotos anteriores">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="gallery-track" id="galleryTrack" aria-label="Galeria de fotos">
+          <!-- Slide 1: Fotos Originais -->
+          <div class="gallery-slide">
+            <div class="gallery-grid">
+              <div class="gallery-item span-2">
+                <img src="assets/images/galeria/Torta Morango e Merengue.jpeg" alt="Torta de Morango e Merengue"
+                  loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/images/galeria/Torta Decorada Flores.jpeg" alt="Torta Decorada com Flores"
+                  loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/images/galeria/Torta Morango Cravejado.jpeg" alt="Torta de Morango Cravejado"
+                  loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/images/galeria/TortaFatia Pudim e Morango Com Bombom.jpg"
+                  alt="Torta de Fatia Pudim e Morango Com Bombom" loading="lazy">
+              </div>
+              <div class="gallery-item span-2">
+                <img src="assets/images/galeria/Tortas Red Velvet e Pistache.jpeg" alt="Tortas de Red Velvet e Pistache"
+                  loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/images/galeria/Tortas Maracujá, Ameixa e Pudim.jpeg"
+                  alt="Tortas de Maracujá, Ameixa e Pudim" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: +5 Novas Fotos Adicionadas à Direita -->
+          <div class="gallery-slide">
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="assets/images/galeria/Tortas Variadas.jpeg" alt="Tortas de Fatia com Sabores Variados"
+                  loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/images/galeria/Torta Ameixa.jpeg" alt="Torta Fatiada de Ameixa" loading="lazy">
+              </div>
+              <div class="gallery-item span-2">
+                <img src="assets/images/galeria/Torta Morango com Beijinho.jpeg"
+                  alt="Torta Fatiada de Morango com Beijinho" loading="lazy">
+              </div>
+              <div class="gallery-item span-2">
+                <img src="assets/images/galeria/Torta Uva.jpeg" alt="Torta Fatiada de Uva" loading="lazy">
+              </div>
+              <div class="gallery-item span-2">
+                <img src="assets/images/galeria/Torta Cereja.jpeg" alt="Torta de Cereja" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="gallery-nav-btn next" id="galleryNextBtn" aria-label="Ver mais fotos" title="Ver mais fotos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Indicador e Paginação do Deslize -->
+      <div class="gallery-slider-footer">
+        <div class="gallery-dots" role="tablist" aria-label="Navegação da galeria">
+          <button class="gallery-dot active" role="tab" aria-label="Página de fotos 1"></button>
+          <button class="gallery-dot" role="tab" aria-label="Página de fotos 2"></button>
+        </div>
+        <span class="gallery-swipe-hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="hint-icon">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+          Deslize para o lado ou use as setas para ver mais fotos
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal / Lightbox para visualização de imagem em tamanho grande -->
+  <div class="modal" id="galleryModal" aria-hidden="true" role="dialog">
+    <button class="modal-close" id="galleryModalClose" aria-label="Fechar visualização">&times;</button>
+    <img src="" alt="" class="modal-content" id="galleryModalImg">
+    <p class="modal-caption" id="galleryModalCaption"></p>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO: AVALIAÇÕES / COMENTÁRIOS DE CLIENTES
+       ======================================================== -->
+  <section class="reviews-section" id="avaliacoes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Depoimentos</span>
+        <h2 class="section-title">O que dizem sobre nós</h2>
+        <p class="section-subtitle">
+          A satisfação dos nossos clientes é o nosso ingrediente mais valioso.
+        </p>
+      </div>
+
+      <!-- Grid dinâmico gerado pelo reviews-data.js -->
+      <div class="reviews-grid" id="reviewsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SEÇÃO: LOCALIZAÇÃO & HORÁRIOS
+       ======================================================== -->
+  <section class="location-section" id="localizacao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Venha nos visitar</span>
+        <h2 class="section-title">Onde Estamos</h2>
+        <p class="section-subtitle">
+          Um cantinho aconchegante esperando por você com cheirinho de pão quente.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <!-- Mapa Embed Google Maps -->
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9094.045373450625!2d-48.86439300349058!3d-28.611136006924113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952157e18ccfda9d%3A0xf7ca3adc1dc1bdb3!2sPadaria%20e%20Confeitaria%20Piko%20do%20P%C3%A3o!5e1!3m2!1spt-BR!2sbr!4v1791916077151!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </iframe>
+        </div>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h4>Endereço</h4>
+              <p>Rua Sueli Vieira Ramos, 70 - Bairro Camacho</p>
+              <p>Jaguaruna - Santa Catarina, CEP 88715-000</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <div class="info-content">
+              <h4>Horário de Funcionamento</h4>
+              <p><strong>Segunda a Sexta:</strong> 07:00 às 19:30</p>
+              <p><strong>Sábado e Domingo:</strong> 07:00 às 20:00</p>
+              <p><strong>Feriados:</strong> 07:00 às 20:00</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">🌐</div>
+            <div class="info-content">
+              <h4>Comodidades</h4>
+              <p>Wi-Fi liberado para clientes e ambiente climatizado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SEÇÃO: CONTATOS & REDES SOCIAIS (RODAPÉ)
+       ======================================================== -->
+  <footer class="site-footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Padaria Piko do Pão</h3>
+          <p>
+            Amor em cada receita, aroma que acolhe e ingredientes de alta qualidade para tornar o seu dia muito mais
+            especial.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Nossos Contatos</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.instagram.com/pikodopao/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">📷 Instagram</a>
+            </li>
+            <li>
+              <a href="https://wa.me/554896210970?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda!" target="_blank"
+                rel="noopener noreferrer">📱 WhatsApp</a>
+            </li>
+            <li>
+              <a>✉️ padariapikodopao@gmail.com.br</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Nossos Serviços</a></li>
+            <li><a href="#cardapios">Nossos Cardápios</a></li>
+            <li><a href="#fotos">Galeria de Fotos</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Padaria Piko do Pão - Desenvolvido por Davi Ramos</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="assets/js/reviews-data.js"></script>
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
